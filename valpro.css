@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    padding: 15px 0;
+}
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Home Section Styles */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.home-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+section.visible h1,
+section.visible h2,
+section.visible h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label, form input, form textarea {
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Team Section Styles */
+.team-container {
+    display: flex;
+    justify-content: center; /* Centers the container itself */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 2em;
+    padding: 0 20px;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.team-member:hover img {
+    transform: rotate(10deg);
+}
+
+/* Keredaksian Section Styles */
+.keredaksian-container {
+    display: flex;
+    justify-content: center; /* Centers the container itself */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 2em;
+    padding: 0 20px;
+}
+
+.keredaksian-member {
+    text-align: center;
+    max-width: 200px;
+    transition: transform 0.3s;
+}
+
+.keredaksian-member:hover {
+    transform: scale(1.05);
+}
+
+.keredaksian-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.keredaksian-member:hover img {
+    transform: rotate(10deg);
+}
+
+/* Social Media Section Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    nav input[type=checkbox]:checked + label + ul {
+        display: flex;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+}
+/* Our Services Styles */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Menambahkan jarak antar layanan */
+    padding: 50px 20px; /* Menambahkan padding untuk memberikan ruang */
+}
+
+.service {
+    text-align: center;
+    flex-basis: calc(33.33% - 40px); /* Mengatur lebar layanan */
+    margin: 20px;
+    padding: 20px; /* Menambahkan padding untuk memberikan ruang */
+    background-color: #f9f9f9; /* Menambahkan latar belakang */
+    border-radius: 10px; /* Mengatur sudut elemen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animasi saat hover */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Menggeser sedikit saat hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan saat hover */
+}
+
+.service img {
+    width: 100px; /* Ukuran logo */
+    height: 100px; /* Ukuran logo */
+}
+
+.service h3 {
+    margin-top: 10px;
+}
+
+/* Other styles remain the same */
+
